@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-05-21T17:58:08.263666" rpa="false" schemaversion="5">
+<suite id="s1" name="Index" source="C:\Documentos\robot-web\Client\index.robot">
+<test id="s1-t1" name="CT: Logar com sucesso" line="6">
+<kw name="CT: Login com sucesso" owner="login">
+<kw name="Dado que usuário esteja na home" owner="login">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-05-21T17:58:08.936046" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<arg>https://www.saucedemo.com/</arg>
+<arg>Chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-05-21T17:58:08.935050" elapsed="5.180965"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-05-21T17:58:14.117011" elapsed="0.109028"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-21T17:58:17.227674" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-21T17:58:14.226039" elapsed="3.001635"/>
+</kw>
+<status status="PASS" start="2024-05-21T17:58:08.933068" elapsed="8.294606"/>
+</kw>
+<kw name="Quando informar credenciais válidas" owner="login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-21T17:58:17.230218" level="INFO">Typing text 'standard_user' into text field '//input[@id='user-name']'.</msg>
+<arg>//input[@id='user-name']</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-21T17:58:17.228717" elapsed="0.411212"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-05-21T17:58:17.640969" level="INFO">Typing text 'secret_sauce' into text field '//input[@id='password']'.</msg>
+<arg>//input[@id='password']</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-21T17:58:17.640969" elapsed="0.234776"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-21T17:58:20.877293" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-21T17:58:17.876742" elapsed="3.000551"/>
+</kw>
+<status status="PASS" start="2024-05-21T17:58:17.228717" elapsed="3.648576"/>
+</kw>
+<kw name="Então realizará login com sucesso" owner="login">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2024-05-21T17:58:20.880919" level="INFO">Clicking button '//input[@id='login-button']'.</msg>
+<arg>//input[@id='login-button']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2024-05-21T17:58:20.878863" elapsed="0.206714"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>//div[@class='app_logo'][contains(.,'Swag Labs')]</arg>
+<arg>10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2024-05-21T17:58:21.085577" elapsed="0.065516"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2024-05-21T17:58:24.151337" level="INFO">Slept 3 seconds.</msg>
+<arg>3s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2024-05-21T17:58:21.151093" elapsed="3.000244"/>
+</kw>
+<status status="PASS" start="2024-05-21T17:58:20.878863" elapsed="3.273493"/>
+</kw>
+<status status="PASS" start="2024-05-21T17:58:08.932051" elapsed="15.220305"/>
+</kw>
+<status status="PASS" start="2024-05-21T17:58:08.930604" elapsed="15.222759"/>
+</test>
+<status status="PASS" start="2024-05-21T17:58:08.269595" elapsed="15.888270"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Index">Index</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
